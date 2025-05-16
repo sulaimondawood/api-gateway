@@ -1,0 +1,14 @@
+services:
+  api-gateway:
+    build: .
+    container_name: api-gateway
+    ports:
+      - "4004:4004"
+    restart: unless-stopped
+    networks:
+      - internal
+
+
+networks:
+  internal:
+    external: true
